@@ -1,0 +1,27 @@
+import java.util.Scanner;
+import java.io.*;
+public class Main 
+{
+    public static void main(String args[])
+    {
+       Scanner sc=new Scanner(System.in);
+       System.out.println("Enter no");
+       long y=sc.nextLong();
+       long x=answer(y);
+       System.out.println(x);
+       
+       
+    }
+    public static long answer(long n) {
+    
+     
+    if(n!=0) {
+        long rem = n % 10;
+        return 100 * answer(n / 10) + 10 * rem + rem;
+}
+else{
+    return 0;
+}
+
+}
+}

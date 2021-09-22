@@ -1,0 +1,34 @@
+import java.util.Scanner;
+import java.io.*;
+public class Main 
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        while(true){
+        float total_pay=0f;
+        System.out.println("Enter the name of the employee:");
+        String name=sc.next();
+        System.out.println("Enter the base pay of the employee:");
+        float base=sc.nextFloat();
+        System.out.println("Enter the no of hours worked by the employee:");
+        int hours=sc.nextInt();
+        if(hours<=40)
+        {
+            total_pay=hours*base;
+            
+        }
+        else if(hours>40)
+        {
+            total_pay=((40*base)+((hours-40)*2*base));
+        }
+        else if(hours>=60)
+        {
+            System.out.println("Hours should not exceed 60");
+        }
+        System.out.println("Name:: "+name+"\nBase Pay:: "+base+"\nHours worked"+hours+"\n Salary of employee::"+total_pay);
+        
+    }
+}
+    
+}

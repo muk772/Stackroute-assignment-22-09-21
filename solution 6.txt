@@ -1,0 +1,24 @@
+import java.util.Scanner;
+import java.io.*;
+public class Main 
+{
+    public static void main(String args[])
+    {
+       Scanner sc=new Scanner(System.in);
+       System.out.println("Enter the pH value of aquarium");
+       float ph=sc.nextFloat();
+       if(ph<7)
+       {
+           System.out.println("pH value is low, partial water change required");
+       }
+       else if(ph>8)
+       {
+          System.out.println("pH value is high, partial water change required"); 
+       }
+       else if(ph>=7 && ph<=8)
+       {
+          System.out.println("pH value is fine"); 
+       }
+    }
+    
+}

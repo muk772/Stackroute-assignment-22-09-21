@@ -1,0 +1,63 @@
+import java.util.Scanner;
+import java.io.*;
+class areacalc
+{
+    void sqarea(float x)
+    {
+        System.out.println("The area of the square fence for chicken is "+Math.pow(x, 2));
+    }
+    void rectarea(float x, float y)
+    {
+        System.out.println("The area of the rectangle fence for cow is "+x*y+" sq units");
+    }
+    void circarea(double x)
+    {
+        double z = 3.14 * x * x;
+        System.out.println("The area of the circle fence for ducks is "+z+" sq units");
+    }
+}
+public class Main 
+{
+     public static void main(String args[]) 
+	{
+	    Scanner sc=new Scanner(System.in);
+	   areacalc ac = new areacalc();
+	   
+	   
+	   while(true)
+	   {
+	   System.out.println("Select an option from list to calculate area of fence ");
+	   System.out.println("1.Square area for the chickens\n2.Circular area for ducks\n3.Rectangular area for cows");
+	   int n=sc.nextInt();
+	   switch(n)
+	   {
+	       case 1:
+	           System.out.println("Enter side of square ");
+	           float sqside=sc.nextFloat();
+	           ac.sqarea(sqside);
+	           break;
+	           
+	       case 2:
+	           System.out.println("Enter radius of circle ");
+	           float radius=sc.nextFloat();
+	           ac.circarea(radius);
+	           break;
+	       
+	       case 3:
+	           System.out.println("Enter length and breadth of Rectangle ");
+	           float length=sc.nextFloat();
+	           float breadth=sc.nextFloat();
+	           ac.rectarea(length,breadth);
+	           break;
+	       
+	           
+	           
+	   }
+	   
+	   
+	  
+	   }
+	   
+	   
+	}	   
+}
